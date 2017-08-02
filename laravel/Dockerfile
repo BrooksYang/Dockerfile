@@ -27,13 +27,13 @@ ADD php.ini /etc/php/7.0/cli/php.ini
 
 RUN a2enmod rewrite
 
-ADD vsftpd.conf /etc/vsftpd.conf
-RUN useradd -m yunchang -s /usr/sbin/nologin
-RUN echo 'yunchang:123456' | chpasswd
-RUN echo "/usr/sbin/nologin" >> /etc/shells
-RUN mkdir /opt/yunchang
-RUN usermod -d /opt/yunchang yunchang
-RUN chown yunchang:yunchang /opt/yunchang
+# ADD vsftpd.conf /etc/vsftpd.conf
+# RUN useradd -m yunchang -s /usr/sbin/nologin
+# RUN echo 'yunchang:123456' | chpasswd
+# RUN echo "/usr/sbin/nologin" >> /etc/shells
+# RUN mkdir /opt/yunchang
+# RUN usermod -d /opt/yunchang yunchang
+# RUN chown yunchang:yunchang /opt/yunchang
 
 
 EXPOSE 80
